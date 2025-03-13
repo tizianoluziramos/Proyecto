@@ -13,9 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const toggleButton = document.getElementById("toggleButton");
-    const togglerer = document.getElementById("togglerer");
     if (toggleButton) {
-      togglerer.style.backgroundColor = "#444";
       toggleButton.innerHTML = "🌙";
       toggleButton.style.backgroundColor = "#333";
       toggleButton.style.color = "white";
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.documentElement.classList.toggle("dark");
 
     const navbar = document.querySelector(".navbar");
-    const datastic = document.getElementById("togglerer");
     if (navbar) {
       if (document.body.classList.contains("dark")) {
         navbar.classList.remove("navbar-light", "bg-light");
@@ -41,14 +38,12 @@ document.addEventListener("DOMContentLoaded", function() {
         navbar.classList.add("navbar-light", "bg-light");
       }
     }
-    // Usando lo que explico el profe el Lunes 10 de Marzo.
+
     if (this.innerHTML === "☀️") {
-      datastic.style.backgroundColor = "#333";
       this.innerHTML = "🌙";
       this.style.backgroundColor = "#333";
       this.style.color = "white";
     } else {
-      datastic.style.backgroundColor = "#333";
       this.innerHTML = "☀️";
       this.style.backgroundColor = "";
       this.style.color = "";
